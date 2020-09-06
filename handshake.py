@@ -5,7 +5,7 @@ import getpass
 from selenium.webdriver.support.wait import WebDriverWait
 import pandas as pd
 import time
-driver = webdriver.Chrome("/Users/vamilgandhi/Documents/chromedriver")
+driver = webdriver.Chrome("/Users/vamilgandhi/Documents/chromedriver") # add your chrome driver here
 
 executor_url = driver.command_executor._url
 session_id = driver.session_id
@@ -56,7 +56,7 @@ def scrap_jobs():
         get_profile(x)
     
     df = pd.DataFrame(job,columns=['Job Tittle','Company', 'Deadline', 'US Work Authorization Status','Link'])
-    df.to_csv('jobs.csv', mode = 'a')
+    df.to_csv('jobs.csv', mode = 'a') # add Header =  False to append to existing file
     
 
 if __name__ == "__main__": 
